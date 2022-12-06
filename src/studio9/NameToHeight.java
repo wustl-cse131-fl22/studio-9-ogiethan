@@ -19,9 +19,29 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		Map<String, Double> mapHeight = new HashMap<String, Double>();
+		System.out.println("Which group member?");
+		String name = in.next();
+		if(name.equals("Quit")) {
+			System.out.println("Ok");
+		}
+		while(!name.equals("Quit")){
 
-		// FIXME
-		throw new NotYetImplementedException();
+			if (name.equals("Ogi")) {
+				mapHeight.put("Ogi", 6.04);
+				System.out.println("Ogi" + mapHeight.get("Ogi"));
+				name = in.next();
+			}
+			else if (name.equals("Ethan")) {
+				mapHeight.put("Ethan",6.13 );
+				System.out.println("Ethan" + mapHeight.get("Ethan"));
+				name = in.next();
+			}else {
+				System.out.println("Please enter a group member's name");
+				name = in.next();
+			}
+
+		}
 
 	}
 }
